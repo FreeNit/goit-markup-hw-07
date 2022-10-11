@@ -716,48 +716,47 @@ a {
 
 .page-footer {
   background-color: var(--contrast-background-color);
+}
+
+.page-footer--position {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.our-main-contacts {
+.contacts--position {
   display: flex;
   align-items: baseline;
 }
 
-.page-footer .logo {
+.page-footer__logo--position {
   display: inline-block;
   margin-bottom: 20px;
 }
 
-.page-footer .logo-part {
+.page-footer__logo--accent-part {
   color: var(--third-decor-color);
 }
 
-.page-footer .contact-us {
+.accommodation__list {
   font-style: normal;
 }
 
-.contact-item {
+.accommodation__item--indent-bottom:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.contact-item:last-child {
-  margin-bottom: 0;
-}
-
-.contact-us .link {
+.accommodation__link {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.71;
   transition: color var(--transition-duration) var(--cubic-bezier);
 }
 
-.contact-us .our-location {
+.accommodation__link--street-accent {
   color: var(--third-decor-color);
 }
 
-.page-footer .link:hover,
-.page-footer .link:focus {
+.accommodation__link:hover,
+.accommodation__link:focus {
   color: var(--main-decor-color);
 }
 
