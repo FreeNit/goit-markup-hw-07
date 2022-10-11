@@ -76,11 +76,11 @@ body {
   padding-bottom: 94px;
 }
 
-.section.no-padding-top {
+.section--no-padding-top {
   padding-top: 0;
 }
 
-.section-title {
+.section__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -88,7 +88,7 @@ body {
   margin-bottom: 50px;
 }
 
-.section-title,
+.section__title,
 .advantage-value,
 .member-name,
 .project-title {
@@ -146,7 +146,7 @@ a {
 
 /* HEADER */
 
-.page-header--indent-bottom {
+.page-header--border-bottom {
   border-bottom: 1px solid #ececec;
 }
 
@@ -264,14 +264,14 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
 }
 
 .hero--position {
   max-width: 1600px;
   margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero__title {
@@ -296,10 +296,12 @@ a {
   background-color: var(--main-decor-color);
   letter-spacing: 0.06em;
   cursor: pointer;
-  display: inline-block;
-  padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: box-shadow var(--transition-duration) var(--cubic-bezier), background-color var(--transition-duration) var(--cubic-bezier);
+}
+
+.hero__btn-make-order--geometry {
+  padding: 10px 32px;
 }
 
 .hero__btn-make-order:hover,
@@ -325,7 +327,6 @@ a {
 
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 }
 
@@ -334,7 +335,7 @@ a {
   opacity: 0;
 }
 
-. {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -533,50 +534,54 @@ a {
   background-color: var(--secondary-decor-color);
 }
 
-
 /* OUR ADVANTAGES */
 
-.advantage-icon-wrapper {
-  height: 120px;
-  padding: 25px 100px;
-  margin-bottom: 30px;
+.advantages--position {
+  display: flex;
+  column-gap: 30px;
+}
+
+.icon-wrapper {
   background-color: var(--background-color);
 }
 
-.advantage-icon {
+.icon-wrapper--position {
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
+.advantages__icon {
   height: 70px;
   width: 70px;
 }
 
-.advantage-value {
+.advantages__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+  color: var(--secondary-text-color);
 }
 
-.advantage-list {
-  display: flex;
-  column-gap: 30px;
-}
-
-.advantage-description {
+.advantages__description {
   line-height: 1.71;
+  color: var(--primary-text-color);
 }
 
 /* OUR OCCUPATION */
 
-.occupation-list {
+.occupation--position {
   display: flex;
   column-gap: 30px;
 }
 
-.occupation-thumb {
+.occupation__thumb {
   position: relative;
 }
 
-.occupation-thumb::before {
+.occupation__thumb::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -588,22 +593,24 @@ a {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.occupation-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 100%;
-  height: 70px;
-
-  padding-top: 27px;
-  padding-bottom: 27px;
+.occupation__title {
   text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--third-decor-color);
+}
+
+.occupation__title--position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
 /* OUR TEAM */
