@@ -680,31 +680,34 @@ a {
 }
 
 /* CLIENTS */
-.partners-list {
+.partners--position {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.partner-link {
+.partners__link {
   line-height: 0;
+  color: var(--icon-main-color);
+  transition: color var(--transition-duration) var(--cubic-bezier), border-color var(--transition-duration) var(--cubic-bezier);
+}
+
+.partners__link--position {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
-  color: var(--icon-main-color);
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
-  transition: color var(--transition-duration) var(--cubic-bezier), border-color var(--transition-duration) var(--cubic-bezier);
 }
 
-.partner-logo {
+.partners__logo {
   fill: currentColor;
 }
 
-.partner-link:hover,
-.partner-link:focus {
+.partners__link:hover,
+.partners__link:focus {
   border-color: var(--main-decor-color);
   color: var(--main-decor-color);
 }
