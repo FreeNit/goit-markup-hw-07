@@ -258,8 +258,6 @@ a {
 
 .hero {
   background-color: #C4C4C4;
-  max-width: 1600px;
-  margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)),
     url(../images/hero_bg.jpg);
@@ -271,8 +269,12 @@ a {
   text-align: center;
 }
 
-.hero .hero-title {
-  max-width: 696px;
+.hero--position {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -280,12 +282,16 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--third-decor-color);
+}
+
+.hero__title--position {
+  max-width: 696px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
 }
 
-.hero .btn.make-order {
+.hero__btn-make-order {
   color: var(--third-decor-color);
   background-color: var(--main-decor-color);
   letter-spacing: 0.06em;
@@ -296,10 +302,12 @@ a {
   transition: box-shadow var(--transition-duration) var(--cubic-bezier), background-color var(--transition-duration) var(--cubic-bezier);
 }
 
-.hero .btn.make-order:hover,
-.hero .btn.make-order:focus {
+.hero__btn-make-order:hover,
+.hero__btn-make-order:focus {
   background-color: var(--secondary-decor-color);
 }
+
+/* POPUP */
 
 .backdrop {
   position: fixed;
