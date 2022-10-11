@@ -146,56 +146,30 @@ a {
 
 /* HEADER */
 
-.page-header--indent-bottom {
+.page-header {
   border-bottom: 1px solid #ececec;
 }
 
-.page-header__content--position {
-  display: flex;
-  align-items: center;
-}
-
-.logo--indent-right {
-  margin-right: 93px;
-}
-
-.logo__part--accent {
+.logo-part {
   color: var(--logo-secondary-color);
 }
 
-.navigation__list--position {
-  display: flex;
-  column-gap: 50px;
-}
-
-.navigation__link {
+.page-header .link {
   letter-spacing: 0.02em;
   font-weight: 500;
   transition: color, var(--transition-duration) var(--cubic-bezier);
 }
 
-.navigation__link {
+.main-navigation .link {
   color: var(--secondary-text-color);
   position: relative;
 }
 
-.navigation__link--position {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.navigation__link--active {
+.link.active {
   color: var(--main-decor-color);
 }
 
-.navigation__link:hover,
-.navigation__link:focus {
-  color: var(--main-decor-color);
-}
-
-.navigation__link--active::after {
+.site-nav .link.active::after {
   content: '';
   display: block;
   position: absolute;
@@ -208,51 +182,60 @@ a {
   background-color: var(--main-decor-color);
 }
 
+.header-contact-us .link {
+  color: var(--primary-text-color);
+  line-height: 1.14;
+  fill: currentColor;
+}
 
-.contact-us--position {
-  list-style: none;
+
+.page-header .link:hover,
+.page-header .link:focus {
+  color: var(--main-decor-color);
+  fill: var(--main-decor-color);
+}
+
+.header-icon {
+  margin-right: 10px;
+}
+
+.header-contact-us .mail-icon {
+  width: 16px;
+  height: 12px;
+}
+
+.header-contact-us .phone-book-icon {
+  width: 10px;
+  height: 16px;
+}
+
+.header-wrapper {
   display: flex;
-  column-gap: 50px;
-  margin-left: auto;
   align-items: center;
 }
 
-.contact-us__link {
-  color: var(--primary-text-color);
-  line-height: 1.14;
-}
-
-.contact-us__link--position {
+.header-wrapper .link {
   display: flex;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.contact-us__link:hover,
-.contact-us__link:focus {
-  color: var(--main-decor-color);
+.page-header .logo {
+  margin-right: 93px;
 }
 
-.contact-us__icon--indent-right {
-  margin-right: 10px;
+.site-nav {
+  display: flex;
+  column-gap: 50px;
 }
 
-.mail-icon,
-.phone-book-icon {
-  fill: currentColor;
+.header-contact-us {
+  display: flex;
+  column-gap: 50px;
+  margin-left: auto;
+  align-items: center;
 }
-
-.mail-icon {
-  width: 16px;
-  height: 12px;
-}
-
-.phone-book-icon {
-  width: 10px;
-  height: 16px;
-}
-
 
 /* HERO */
 
