@@ -85,6 +85,10 @@
     margin-bottom: 10px;
   }
   &__field:focus-within &__icon {
+    // Old variant
+    //.contact-form-input:focus~.contact-form-icon {
+    // fill: var(--main-decor-color);
+    // }
     //Modern variant with :focus-within pseudo-class
     fill: map-get($colors, 'main-decor-color');
   }
@@ -101,6 +105,8 @@
     display: flex;
     flex-direction: column;
   }
+
+  // Form INPUT
   &__input {
     padding: 11px 15px 11px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -117,6 +123,8 @@
       border-color: map-get($colors, 'main-decor-color');
     }
   }
+
+  // Form INPUT ICON
   &__icon {
     position: absolute;
     top: 50%;
@@ -128,6 +136,7 @@
       map-get($transition-parameters, 'cubic-bezier');
   }
 
+  // Form TEXTAREA
   &__field-area {
     display: flex;
     flex-direction: column;
@@ -143,7 +152,7 @@
     font-size: 14px;
     line-height: 1.16;
     letter-spacing: 0.01em;
-    color: var(--secondary-text-color);
+    color: map-get($colors, 'secondary-text-color');
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
@@ -163,70 +172,63 @@
       color: rgba(117, 117, 117, 0.5);
     }
   }
-}
 
-/* Old variant */
-/* .contact-form-input:focus~.contact-form-icon {
-  fill: var(--main-decor-color);
-} */
+  // Form CHECKBOX
+  &__checkbox--indent-bottom {
+    margin-bottom: 30px;
+  }
+  &__checkbox-label {
+    position: relative;
+    display: block;
+    line-height: 1.71;
+    text-align: center;
+  }
+  &__checkbox-input {
+    appearance: none;
+    position: absolute;
+    &:checked + .contact-form__icon-check {
+      fill: map-get($colors, 'third-decor-color');
+      background-color: map-get($colors, 'main-decor-color');
+      border-color: map-get($colors, 'main-decor-color');
+    }
+  }
+  &__icon-check {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid rgba(33, 33, 33, 0.7);
+    border-radius: 2px;
+    fill: map-get($colors, 'third-decor-color');
+    transition: fill map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier'),
+      background-color map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier'),
+      border-color map-get($transition-parameters, 'transition-duration')
+        map-get($transition-parameters, 'cubic-bezier');
+  }
+  &__policy {
+    color: map-get($colors, 'main-decor-color');
+    text-decoration: underline;
+  }
 
-.contact-form__checkbox {
-  margin-bottom: 30px;
-}
-
-.contact-form__checkbox-label {
-  position: relative;
-  display: block;
-  line-height: 1.71;
-  text-align: center;
-}
-
-.contact-form__checkbox-input {
-  appearance: none;
-  position: absolute;
-}
-
-.contact-form__icon-check {
-  display: block;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 1px solid rgba(33, 33, 33, 0.7);
-  border-radius: 2px;
-  fill: var(--third-decor-color);
-  transition: fill var(--transition-duration) var(--cubic-bezier),
-    background-color var(--transition-duration) var(--cubic-bezier),
-    border-color map-get($transition-parameters, 'transition-duration')
+  // Form BUTTON
+  &__btn-submit {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 52px;
+    letter-spacing: 0.06em;
+    color: map-get($colors, 'third-decor-color');
+    background-color: map-get($colors, 'main-decor-color');
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color
+      map-get($transition-parameters, 'transition-duration')
       map-get($transition-parameters, 'cubic-bezier');
-}
-
-.contact-form__checkbox-input:checked + .contact-form__icon-check {
-  fill: var(--third-decor-color);
-  background-color: var(--main-decor-color);
-  border-color: var(--main-decor-color);
-}
-
-.contact-form__policy {
-  color: var(--main-decor-color);
-  text-decoration: underline;
-}
-
-.contact-form__btn-submit {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 52px;
-  letter-spacing: 0.06em;
-  color: var(--third-decor-color);
-  background-color: var(--main-decor-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: background-color
-    map-get($transition-parameters, 'transition-duration')
-    map-get($transition-parameters, 'cubic-bezier');
-}
-
-.contact-form__btn-submit:hover,
-.contact-form__btn-submit:focus {
-  background-color: var(--secondary-decor-color);
+    &:hover,
+    &:focus {
+      background-color: map-get($colors, 'secondary-decor-color');
+    }
+  }
 }
