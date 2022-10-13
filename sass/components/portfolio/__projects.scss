@@ -59,7 +59,8 @@
   }
 
   // &-link:hover &-thumb::before,
-  &__link:hover &__description {
+  &__link:hover &__description,
+  &__link:focus &__description {
     transform: translateY(0);
   }
 

@@ -579,12 +579,13 @@
           </svg>
         </button>
         <h3 class="modal__title">Залиште свої дані, ми вам передзвонимо</h3>
+        <!-- Contact Form -->
         <form
           action="javascript:void(0);"
           class="contact-form"
           autocomplete="off"
         >
-          <div class="contact-form__field">
+          <div class="contact-form__field contact-form__field--indent-bottom">
             <label for="userName" class="contact-form__label">Ім'я </label>
             <div class="contact-form__input-thumb">
               <input
@@ -598,7 +599,7 @@
               </svg>
             </div>
           </div>
-          <div class="contact-form__field">
+          <div class="contact-form__field contact-form__field--indent-bottom">
             <label for="phone-number" class="contact-form__label"
               >Телефон</label
             >
@@ -614,7 +615,9 @@
               </svg>
             </div>
           </div>
-          <div class="contact-form__field email">
+          <div
+            class="contact-form__field contact-form__field--indent-bottom email"
+          >
             <label for="email" class="contact-form__label">Пошта</label>
             <div class="contact-form__input-thumb">
               <input
