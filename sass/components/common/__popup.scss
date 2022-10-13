@@ -211,6 +211,7 @@
   &__policy {
     color: map-get($colors, 'main-decor-color');
     text-decoration: underline;
+    text-underline-offset: 5px;
   }
 
   // Form BUTTON

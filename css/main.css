@@ -832,6 +832,7 @@ a {
 .contact-form__policy {
   color: #2196f3;
   text-decoration: underline;
+  text-underline-offset: 5px;
 }
 .contact-form__btn-submit {
   display: block;
