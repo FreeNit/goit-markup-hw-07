@@ -187,7 +187,7 @@
     appearance: none;
     position: absolute;
     &:checked + .contact-form__icon-check {
-      fill: map-get($colors, 'third-decor-color');
+      fill: transparent;
       background-color: map-get($colors, 'main-decor-color');
       border-color: map-get($colors, 'main-decor-color');
     }
